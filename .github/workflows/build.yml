@@ -38,6 +38,6 @@ jobs:
     name: 🚀 Deploy / Staging
     runs-on: ubuntu-latest
     needs:
-    - "👷 Build"
+    - "build"
     steps:
     - run: "echo deploying on Staging"
