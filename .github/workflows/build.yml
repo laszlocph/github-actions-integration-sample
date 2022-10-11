@@ -52,6 +52,7 @@ jobs:
     needs:
     - "docker-build"
     if: github.ref == 'refs/heads/main'
+    environment: staging
     steps:
     - name: ⬇️ Check out
       uses: actions/checkout@v3.1.0
