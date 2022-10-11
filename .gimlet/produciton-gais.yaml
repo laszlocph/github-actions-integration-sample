@@ -1,6 +1,6 @@
 app: gais
-env: staging
-namespace: staging
+env: production
+namespace: default
 chart:
   repository: https://chart.onechart.dev
   name: onechart
@@ -16,7 +16,7 @@ values:
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt
       kubernetes.io/ingress.class: nginx
-    host: gais.staging.turbopizza.net
+    host: gais.turbopizza.net
     tlsEnabled: true
   resources:
     requests:
