@@ -1,11 +1,12 @@
-name: Branch Deleted
+name: 🧹 Cleaning up preview app
 on: #delete
   push:
     branches:
       - '*'
 jobs:
   delete:
-    # if: github.event.ref_type == 'branch'
+    name: 🧹 Cleaning up preview app
+    if: github.event.ref_type == 'branch'
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/gimlet-io/gimlet-cli:v0.18.0-rc.11
@@ -14,7 +15,7 @@ jobs:
         uses: actions/checkout@v3.1.0
         with:
           fetch-depth: 1
-      - name: Clean up
+      - name: 🧹 Cleaning up preview app
         env:
           GIMLET_SERVER: ${{ secrets.GIMLET_SERVER }}
           GIMLET_TOKEN: ${{ secrets.GIMLET_TOKEN }}
