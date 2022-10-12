@@ -18,5 +18,9 @@ jobs:
         run: |
           apk add yq --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community
           echo "Clean up for branch ${{ github.event.ref }}"
+          export SHA=$GITHUB_SHA
+          export GITHUB_BRANCH=${GITHUB_REF##refs/heads/}
+          echo $SHA
+          echo $GITHUB_BRANCH
           APP_NAME=$(gimlet manifest template -f .gimlet/preview-gais.yaml | yq 'select(document_index == 1).metadata.name')
           echo $APP_NAME
