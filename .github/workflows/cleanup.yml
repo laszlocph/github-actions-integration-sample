@@ -1,0 +1,13 @@
+name: Branch Deleted
+on: delete
+jobs:
+  delete:
+    if: github.event.ref_type == 'branch'
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/gimlet-io/gimlet-cli:v0.18.0-rc.11
+    steps:
+      - name: Clean up
+        run: |
+          echo "Clean up for branch ${{ github.event.ref }}"
+          gimlet
