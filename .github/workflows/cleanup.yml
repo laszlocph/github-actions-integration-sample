@@ -1,8 +1,5 @@
 name: 🧹 Cleaning up preview app
-on: #delete
-  push:
-    branches:
-      - '*'
+on: delete
 jobs:
   delete:
     name: 🧹 Cleaning up preview app
