@@ -1,5 +1,8 @@
 name: Branch Deleted
-on: delete
+on: #delete
+  push:
+    branches:
+      - '*'
 jobs:
   delete:
     if: github.event.ref_type == 'branch'
@@ -10,4 +13,5 @@ jobs:
       - name: Clean up
         run: |
           echo "Clean up for branch ${{ github.event.ref }}"
-          gimlet
+          APP_NAME=$(gimlet manifest template -f .gimlet/preview-gais.yaml | yq 'select(document_index == 1).metadata.name')
+          echo $APP_NAME
