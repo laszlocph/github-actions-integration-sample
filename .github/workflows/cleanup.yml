@@ -6,7 +6,7 @@ jobs:
     if: github.event.ref_type == 'branch'
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/gimlet-io/gimlet-cli:v0.18.0-rc.11
+      image: ghcr.io/gimlet-io/gimlet-cli:v0.18.0
     steps:
       - name: ⬇️ Check out
         uses: actions/checkout@v3.1.0
