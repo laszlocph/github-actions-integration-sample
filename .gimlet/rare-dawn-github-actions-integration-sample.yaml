@@ -16,4 +16,4 @@ values:
   resources:
     ignoreLimits: true
   vars:
-    REPO_VAR: {{ .REPO_VAR }}
+    REPO_VAR: '{{ .REPO_VAR }}'
