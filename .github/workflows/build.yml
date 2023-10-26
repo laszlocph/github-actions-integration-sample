@@ -83,7 +83,7 @@ jobs:
       with:
         DEPLOY: "true"
         ENV: "rare-dawn"
-        APP: "gais"
+        APP: "github-actions-integration-sample"
       env:
         GIMLET_SERVER: ${{ secrets.GIMLET_SERVER }}
         GIMLET_TOKEN: ${{ secrets.GIMLET_TOKEN }}
