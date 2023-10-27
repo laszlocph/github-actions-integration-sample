@@ -12,7 +12,7 @@ values:
   image:
     repository: nginx
     tag: 1.19.3
-  replicas: 2
+  replicas: 1
   resources:
     ignoreLimits: true
   vars:
