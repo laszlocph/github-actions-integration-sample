@@ -4,7 +4,7 @@ namespace: default
 chart:
   repository: https://chart.onechart.dev
   name: onechart
-  version: 0.57.0
+  version: 0.58.0
 values:
   containerPort: 80
   gitRepository: laszlocph/github-actions-integration-sample
@@ -17,3 +17,6 @@ values:
     ignoreLimits: true
   vars:
     REPO_VAR: '{{ .REPO_VAR }}'
+  existingConfigMaps:
+  - name: rare-dawn
+    optional: true
