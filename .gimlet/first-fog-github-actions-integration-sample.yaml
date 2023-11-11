@@ -14,7 +14,7 @@ values:
     tag: '{{ .SHA }}'
   ingress:
     annotations: {}
-    host: $$$notvalid
+    host: github-actions-integration-sample.demo
     path: /
     tlsEnabled: false
   replicas: 1
