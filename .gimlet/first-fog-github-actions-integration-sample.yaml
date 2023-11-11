@@ -1,0 +1,17 @@
+app: github-actions-integration-sample
+env: first-fog
+namespace: default
+chart:
+  repository: https://chart.onechart.dev
+  name: onechart
+  version: 0.58.0
+values:
+  containerPort: 80
+  gitRepository: laszlocph/github-actions-integration-sample
+  gitSha: '{{ .SHA }}'
+  image:
+    repository: ghcr.io/laszlocph/gais
+    tag: '{{ .SHA }}'
+  replicas: 1
+  resources:
+    ignoreLimits: true
