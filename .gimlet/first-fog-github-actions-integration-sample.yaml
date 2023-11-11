@@ -17,7 +17,7 @@ values:
     host: github-actions-integration-sample.demo
     path: /
     tlsEnabled: false
-  replicas: 1
+  replicas: 2
   resources:
     ignoreLimits: true
   vars:
