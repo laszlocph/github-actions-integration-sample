@@ -12,6 +12,11 @@ values:
   image:
     repository: ghcr.io/laszlocph/gais
     tag: '{{ .SHA }}'
+  ingress:
+    annotations: {}
+    host: $$$notvalid
+    path: /
+    tlsEnabled: false
   replicas: 1
   resources:
     ignoreLimits: true
