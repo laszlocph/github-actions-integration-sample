@@ -11,7 +11,7 @@ values:
   gitSha: '{{ .SHA }}'
   image:
     repository: ghcr.io/laszlocph/gais
-    tag: '"{{ .SHA }}"'
+    tag: '{{ .SHA }}'
   replicas: 1
   resources:
     ignoreLimits: true
