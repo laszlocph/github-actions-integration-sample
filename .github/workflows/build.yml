@@ -62,23 +62,3 @@ jobs:
       env:
         GIMLET_SERVER: ${{ secrets.GIMLET_SERVER }}
         GIMLET_TOKEN: ${{ secrets.GIMLET_TOKEN }}
-  deploy-first-fog-broken-feedback-loop:
-    name: 🚀 Deploy / First-Fog / Broken Feedback Loop
-    runs-on: ubuntu-latest
-    needs:
-    - "docker-build"
-    if: github.ref == 'refs/heads/main'
-    environment: staging
-    steps:
-    - name: ⬇️ Check out
-      uses: actions/checkout@v3.1.0
-      with:
-        fetch-depth: 1
-    - name: 🚀 Deploy / First-Fog
-      uses: gimlet-io/gimlet-artifact-shipper-action@v0.9.0
-      with:
-        ENV: "first-fog"
-        APP: "broken-feedback-loop"
-      env:
-        GIMLET_SERVER: ${{ secrets.GIMLET_SERVER }}
-        GIMLET_TOKEN: ${{ secrets.GIMLET_TOKEN }}
