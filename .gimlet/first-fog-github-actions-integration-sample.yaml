@@ -13,7 +13,8 @@ values:
     repository: ghcr.io/laszlocph/gais
     tag: '{{ .SHA }}'
   ingress:
-    annotations: {}
+    annotations:
+      kubernetes.io/ingress.class: nginx
     host: github-actions-integration-sample.demo
     path: /
     tlsEnabled: false
