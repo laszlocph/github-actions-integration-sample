@@ -1,6 +1,8 @@
 name: Preview
 on:
-  pull_request: {}
+  pull_request:
+    branches:
+      - 'disabled'
 
 jobs:
   build:
