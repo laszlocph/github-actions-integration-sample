@@ -21,5 +21,4 @@ values:
   replicas: 2
   resources:
     ignoreLimits: true
-  vars:
-    PODTATO_COMPONENT: left-arm
+  vars: {}
